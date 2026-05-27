@@ -1,0 +1,18 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+	<defs>
+		<image  width="1080" height="1080" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABDgAAAQ4AQMAAADW3v7MAAAAAXNSR0IB2cksfwAAAANQTFRFMTExFVC19QAAA0hJREFUeJztzjEBACAMwDDm3zTPniiAo1GQOX+Y14HVQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQz3UQxfkswQ5pU9WdQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 183px;fill: #ffffff;font-weight: 400;font-family: "Orbitron-Bold", "Orbitron" } 
+		.t1 { font-size: 183px;fill: #0d090e;font-weight: 400;font-family: "Orbitron-Bold", "Orbitron" } 
+		.t2 { font-size: 183px;fill: #e01535;font-weight: 400;font-family: "Orbitron-Bold", "Orbitron" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<text id="user deck" style="transform: matrix(2.021,0,0,2.021,538.49,425.327)">
+		<tspan x="-233.2" y="0" class="t0">u</tspan><tspan  y="0" class="t0">s</tspan><tspan  y="0" class="t0">e</tspan><tspan  y="0" class="t0">r</tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="-240.6" y="219.6" class="t2">de</tspan><tspan  y="219.6" class="t2">c</tspan><tspan  y="219.6" class="t2">k</tspan><tspan  y="219.6" class="t2">
+</tspan>
+	</text>
+</svg>
