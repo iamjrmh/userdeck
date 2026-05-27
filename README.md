@@ -97,6 +97,22 @@ Keymap tab → **Reset keymap** clears every page's bindings + page names on the
 
 ---
 
+## Building one (hardware)
+
+### What you'll need
+
+- A 3D-printed userdeck enclosure (files in [`/hardware`](https://github.com/iamjrmh/userdeck/tree/main/hardware))
+- Raspberry Pi Pico
+- 18 mechanical key switches
+- Wiring and a **micro USB** cable (the Pico's native port)
+- *Optional but recommended:* 1x GC9A01 1.28" circular display - shows the current page, button labels, and confirmation prompts. The deck works fine without it; you just lose the visual feedback layer.
+
+### Want USB-C instead?
+
+The Pico ships with a micro USB port. If you'd rather have USB-C (and you're comfortable with a bit of extra soldering), wire in an **[Adafruit USB Type C Breakout Board - Downstream Connection (Product ID 4090)](https://www.adafruit.com/product/4090)**. It exposes D+, D-, VBUS, and GND pads that drop straight onto the Pico's USB pins. The enclosure has space for it if you mount it at the back. Nothing in the firmware or configurator changes - the deck still enumerates as the same userdeck device.
+
+---
+
 ## Multi-device support
 
 If you've built more than one userdeck:
