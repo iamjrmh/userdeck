@@ -99,17 +99,31 @@ Keymap tab → **Reset keymap** clears every page's bindings + page names on the
 
 ## Building one (hardware)
 
-### What you'll need
+### Bill of materials
 
-- A 3D-printed userdeck enclosure (files in [`/hardware`](https://github.com/iamjrmh/userdeck/tree/main/hardware))
-- Raspberry Pi Pico
-- 18 mechanical key switches
-- Wiring and a **micro USB** cable (the Pico's native port)
-- *Optional but recommended:* 1x GC9A01 1.28" circular display - shows the current page, button labels, and confirmation prompts. The deck works fine without it; you just lose the visual feedback layer.
+| Part | What I use | Notes |
+|---|---|---|
+| **Microcontroller** | [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/) | The original RP2040 board. Pico 2 also works. |
+| **Key switches (x18)** | [Kailh Low Profile Cherry MX-style switches](https://www.amazon.com/dp/B0B4626RK3) | Any Cherry MX-compatible switch fits. Low-profile keeps the deck thin. |
+| **Wire (signal)** | [TUOFENG 30AWG colored solid](https://www.amazon.com/dp/B0C1J5M3P7) | Thin enough to snake between switches. |
+| **Wire (heavier runs)** | [TUOFENG 28AWG colored solid](https://www.amazon.com/dp/B093GZZZ6Y) | Optional, for power / longer pin runs. |
+| **Filament** | [SUNLU PLA+ 1.75mm](https://www.amazon.com/dp/B0DHCT8YDN) | Any decent PLA prints the enclosure fine. |
+| **Cable** | **micro USB** | The Pico's native port. See USB-C section below if you'd rather swap it. |
+| **Display** *(optional, recommended)* | GC9A01 1.28" circular SPI display | Shows the current page, button labels, and confirmation prompts. The deck works fine without it; you just lose the visual feedback layer. |
+
+3D-printable enclosure files are in [`hardware/`](https://github.com/iamjrmh/userdeck/tree/main/hardware).
 
 ### Want USB-C instead?
 
 The Pico ships with a micro USB port. If you'd rather have USB-C (and you're comfortable with a bit of extra soldering), wire in an **[Adafruit USB Type C Breakout Board - Downstream Connection (Product ID 4090)](https://www.adafruit.com/product/4090)**. It exposes D+, D-, VBUS, and GND pads that drop straight onto the Pico's USB pins. The enclosure has space for it if you mount it at the back. Nothing in the firmware or configurator changes - the deck still enumerates as the same userdeck device.
+
+### My workshop setup
+
+You don't need any of this to build a userdeck, but if you're starting from zero, this is what I use:
+
+- **3D printer** - [Elegoo Neptune 3 Pro](https://us.elegoo.com/products/elegoo-neptune-3-pro-fdm-3d-printer-225x225x280mm)
+- **Soldering / hot-air reflow station** - [combo unit on Amazon](https://www.amazon.com/dp/B0DGD8813V)
+- **Microscope** - [Andonstar AD240](https://www.amazon.com/dp/B0C5Q4YKV9) (helpful for inspecting GC9A01 ribbon joints)
 
 ---
 
