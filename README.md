@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/iamjrmh/userdeck">
-    <img src="assets/logo.svg" alt="userdeck" width="180" />
+    <img src="assets/logo.apng" alt="userdeck" width="180" />
   </a>
 </p>
 
@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/iamjrmh/userdeck">
-    <img src="assets/userdeck.svg" alt="userdeck logo" width="48" />
+    <img src="assets/logo.svg" alt="userdeck logo" width="48" />
   </a>
 </p>
 
