@@ -127,7 +127,7 @@ You don't need any of this to build a userdeck, but if you're starting from zero
 
 - **3D printer** - [Elegoo Neptune 3 Pro](https://us.elegoo.com/products/elegoo-neptune-3-pro-fdm-3d-printer-225x225x280mm)
 - **Soldering / hot-air reflow station** - [combo unit on Amazon](https://www.amazon.com/dp/B0DGD8813V)
-- **Microscope** - [Andonstar AD240](https://www.amazon.com/dp/B0C5Q4YKV9) (helpful for inspecting GC9A01 ribbon joints)
+- **Microscope** - [Andonstar AD240](https://www.amazon.com/dp/B0C5Q4YKV9) (helpful for inspecting GC9A01 solder joints)
 
 ---
 
