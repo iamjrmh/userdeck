@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="assets/userdeck.svg" alt="userdeck" width="180" />
+  <a href="https://github.com/iamjrmh/userdeck">
+    <img src="assets/userdeck.svg" alt="userdeck" width="180" />
+  </a>
 </p>
 
 <h1 align="center">userdeck</h1>
@@ -11,7 +13,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/logo.svg" alt="userdeck logo" width="48" />
+  <a href="https://github.com/iamjrmh/userdeck">
+    <img src="assets/logo.svg" alt="userdeck logo" width="48" />
+  </a>
 </p>
 
 ---
