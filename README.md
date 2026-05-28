@@ -112,6 +112,7 @@ Keymap tab → **Reset keymap** clears every page's bindings + page names on the
 | **Wire (signal)** | [TUOFENG 30AWG colored solid](https://www.amazon.com/dp/B0C1J5M3P7) | Thin enough to snake between switches. |
 | **Wire (heavier runs)** | [TUOFENG 28AWG colored solid](https://www.amazon.com/dp/B093GZZZ6Y) | Optional, for power / longer pin runs. |
 | **Filament** | [SUNLU PLA+ 1.75mm](https://www.amazon.com/dp/B0DHCT8YDN) | Any decent PLA prints the enclosure fine. |
+| **Rubber Feet** | [AUSTOR 318 Pieces Black Rubber Feet ](https://www.amazon.com/dp/B07CNQC695) | Any set of 4 circular 6mm x 6mm rubber feet will work |
 | **Cable** | **micro USB** | The Pico's native port. See USB-C section below if you'd rather swap it. |
 | **Display** *(optional, recommended)* | GC9A01 1.28" circular SPI display | Shows the current page, button labels, and confirmation prompts. The deck works fine without it; you just lose the visual feedback layer. |
 
