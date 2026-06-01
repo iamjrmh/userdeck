@@ -33,6 +33,15 @@ userdeck is a small 3×6 grid of physical buttons backed by a Raspberry Pi Pico.
 
 Two physical buttons are reserved as **prev page / next page**. The two bottom corners become **cancel / confirm** when a binding asks for confirmation.
 
+### Two modes: Streamdeck and Soundboard
+
+Hold **Confirm** for one second and the whole deck flips between two modes:
+
+- **Streamdeck mode** - the bindings above (keys, macros, launchers, system actions).
+- **Soundboard mode** - the same 5-page grid becomes **sound pads**. Press one and its audio file plays straight into your microphone, so Discord, OBS, games, and anyone in your call hear it alongside your voice. Up to 80 sounds across the 5 pages.
+
+Hold Confirm again to switch back. The soundboard needs a virtual audio cable (the free **VB-CABLE**), which the Configurator can install for you in one click - see [Soundboard](#soundboard) below.
+
 ---
 
 ## Installing
@@ -52,9 +61,9 @@ The app needs a one-time UAC prompt the first time it launches a program that re
 | **Top-right pill** | Live connection status. Shows `searching…`, a COM port, or `N devices`. |
 | **Device tab strip** *(only when 2+ decks are plugged in)* | Switch between userdecks - each remembers its own keymap, launchers, and bindings. |
 | **Launchers** | Map a name (e.g. `obs`) to a program on your machine. The Keymap tab's *Launch program* action points at these names. |
-| **Keymap** | Edit what each cell does on each of the 5 pages. Click a cell to bind it. |
+| **Keymap** | Edit what each cell does on each of the 5 pages. Toggle between **Streamdeck** (key bindings) and **Soundboard** (sound pads) at the top, then click a cell to edit it. |
 | **Activity** | Live JSON stream from the device - useful for diagnosing weird button behaviour. |
-| **Settings** | USB IDs, idle timeout, press-label duration, rename/forget device, firmware flashing. |
+| **Settings** | USB IDs, idle timeout, press-label duration, rename/forget device, firmware flashing, and the soundboard's microphone / virtual-cable setup. |
 
 ---
 
@@ -95,9 +104,38 @@ A *Sequence* binding chains up to 8 sub-actions and runs them in order with a 1 
 
 Each step picks its own kind (key / text / media / system / launch). Reorder with **▲ ▼**, delete with **✕**, max 8 steps.
 
-### Resetting a keymap
+### Soundboard
 
-Keymap tab → **Reset keymap** clears every page's bindings + page names on the active device. Launchers and physical button bindings (from the wizard) are kept.
+The soundboard turns your deck's pads into sound triggers that play **into your microphone**, so other apps hear them with your voice. It is a host-side feature - the Configurator does the audio mixing, so keep the app running (it lives in the tray).
+
+#### One-time setup
+
+1. Open **Settings** and scroll to **Soundboard & virtual mic**.
+2. Routing audio into your mic needs a virtual audio cable. Click **Install virtual cable** to download and install the free **VB-CABLE** driver (one Windows prompt). If you already have it, the app detects and selects it automatically.
+3. The app auto-picks your **default microphone** as the input and **CABLE Input** as the output. The soundboard enables itself the first time a cable is detected.
+4. In your chat app (Discord, etc.) set the **microphone** to **CABLE Output**. That is the one manual step the app can't do for you.
+
+That's it - your voice plus any pad now flows into that app.
+
+#### Adding sounds
+
+1. Open **Keymap** and switch the toggle at the top to **Soundboard**.
+2. Click any pad to assign an audio file (mp3, wav, ogg, flac, m4a, aac, opus), give it a label, and set its volume. **Preview** auditions it on your speakers before you commit.
+3. Or **drag and drop**: drop one file or a whole folder onto the grid and the pads fill themselves - sorted numbers-first then A to Z, flowing across pages 1 to 5, skipping the reserved cells. Labels are taken from the file names. Drop onto a specific pad to start filling there, or anywhere to fill the next empty pads.
+
+#### On the deck
+
+Hold **Confirm** for one second to enter Soundboard mode (the app logs the mode change in **Activity**). Press pads to fire sounds; **prev / next page** still flips between your 5 pages. Hold Confirm again to return to Streamdeck mode and your key bindings.
+
+#### Audio controls (Settings)
+
+- **Master volume** rides the overall level; each pad also has its own volume.
+- **Mix my microphone through** keeps your real voice flowing to the cable alongside the sounds (on by default).
+- **Monitor audio** also plays the mic + pads through your speakers so you can hear what you're sending. It is off by default each launch - **use headphones**, or the mic will pick up the speakers and echo.
+
+### Resetting a keymap or soundboard
+
+Keymap tab → **Reset keymap** clears every page's bindings + page names on the active device. On the **Soundboard** tab the same button becomes **Reset sounds** and clears only your pads. Launchers and physical button bindings (from the wizard) are always kept.
 
 ---
 
@@ -195,6 +233,10 @@ Wake-from-full-shutdown (S5) depends on your motherboard. Some chipsets only sup
 | **Reconnect device** | Tears down the serial listener and rediscovers. Use if a deck got stuck after a USB hub swap. |
 | **Rebind buttons…** | Re-runs the first-time wizard for the active device (lets you re-do the physical button → on-screen cell mapping). |
 | **Reset to default…** | Wipes ALL config - every device, every keymap, every launcher. Re-opens the wizard. There is no undo. |
+| **Enable soundboard** | Turns the soundboard mix engine on or off. While on, your mic passes through to the virtual cable and pad presses play into it. |
+| **Install virtual cable** | Downloads and installs the free VB-CABLE driver (one prompt), then auto-selects it as the output. |
+| **Microphone / Virtual cable** | Which input the engine captures and which device it outputs to. Auto-filled with your default mic and CABLE Input. |
+| **Master volume / Mic passthrough / Monitor audio** | Overall soundboard level, whether your real voice is mixed in, and whether to also hear the mix on your speakers (off each launch). |
 
 ---
 
@@ -217,6 +259,12 @@ Older firmware reports a hardcoded USB serial. Flash the deck (any deck) once wi
 
 **The window closes but the app is still in the tray.**
 That's intentional - userdeck keeps relaying device events to your OS in the background so press events still fire. Right-click the tray icon → Quit to exit fully.
+
+**Soundboard plays on my deck but Discord / OBS don't hear it.**
+Set that app's **microphone** to **CABLE Output** (not your real mic). Then check that the soundboard is **enabled** in Settings (status reads `Running`) and the deck is in Soundboard mode (hold **Confirm** for a second). No cable listed? **Settings → Install virtual cable**.
+
+**I hear an echo / feedback when monitoring.**
+**Monitor audio** plays the mix through your speakers, which your mic then picks up. Use headphones, or turn Monitor off (it's off by default each launch).
 
 ---
 
