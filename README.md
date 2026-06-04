@@ -156,6 +156,24 @@ Keymap tab → **Reset keymap** clears every page's bindings + page names on the
 
 3D-printable enclosure files are in [`hardware/`](https://github.com/iamjrmh/userdeck/tree/main/hardware).
 
+### Wiring the display (GC9A01)
+
+The GC9A01 is a 1.28" round SPI panel. Its `SCL`/`SDA` labels are the SPI clock and data lines (it's **not** I2C). Common pin-label sets are `GND / VCC / SCL / SDA / RES / DC / CS / BLK`. Wire it to the Pico like this:
+
+| Screen pin | Pico GPIO | Pico physical pin | Notes |
+|---|---|---|---|
+| VCC | 3V3 | 36 | 3.3 V, **not** 5 V |
+| GND | GND | any GND (e.g. 38) | |
+| SCL | GP2 | 4 | SPI0 SCK |
+| SDA | GP3 | 5 | SPI0 TX (MOSI) |
+| CS  | GP5 | 7 | chip select |
+| DC  | GP6 | 9 | data/command |
+| RST | GP7 | 10 | reset |
+
+`BLK` (backlight) is unused on the common 7-pin module - the backlight is hard-wired to VCC and is on whenever the panel is powered. If your module exposes `BLK` and you want firmware control of it, set `DISP_PIN_BL` in [`firmware/src/config.h`](https://github.com/iamjrmh/userdeck/blob/main/firmware/src/config.h); otherwise leave it `-1`.
+
+These pins (and the SPI clock speed) live in `firmware/src/config.h`. The display runs SPI at 62.5 MHz (the RP2040's ceiling) so the full-screen boot/idle animation plays at a smooth 60 fps; if a longer or messier wiring run shows noise, step the `DISP_SPI_HZ` fallback ladder down to the next achievable rate (31.25 → 20.8 → 15.6 MHz). On boot the panel plays the userdeck splash, then shows the current page, button labels, and confirmation prompts; after a minute idle it loops a screensaver.
+
 ### Want USB-C instead?
 
 The Pico ships with a micro USB port. If you'd rather have USB-C (and you're comfortable with a bit of extra soldering), wire in an **[Adafruit USB Type C Breakout Board - Downstream Connection (Product ID 4090)](https://www.adafruit.com/product/4090)**. It exposes D+, D-, VBUS, and GND pads that drop straight onto the Pico's USB pins. The enclosure has space for it if you mount it at the back. Nothing in the firmware or configurator changes - the deck still enumerates as the same userdeck device.
