@@ -38,7 +38,7 @@ Two physical buttons are reserved as **prev page / next page**. The two bottom c
 Hold **Confirm** for one second and the whole deck flips between two modes:
 
 - **Streamdeck mode** - the bindings above (keys, macros, launchers, system actions).
-- **Soundboard mode** - the same 5-page grid becomes **sound pads**. Press one and its audio file plays straight into your microphone, so Discord, OBS, games, and anyone in your call hear it alongside your voice. Up to 80 sounds across the 5 pages.
+- **Soundboard mode** - the same 5-page grid becomes **sound pads**. Press one and its audio file plays straight into your microphone, so Discord, OBS, games, and anyone in your call hear it alongside your voice.
 
 Hold Confirm again to switch back. The soundboard needs a virtual audio cable (the free **VB-CABLE**), which the Configurator can install for you in one click - see [Soundboard](#soundboard) below.
 
